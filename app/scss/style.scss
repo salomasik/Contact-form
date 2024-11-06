@@ -1,0 +1,198 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import './message.scss';
+
+
+*{
+    font-family: "Karla", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    display:grid ;
+    justify-items: center;
+    align-items: center;
+    background-color:$Green-200 ;
+}
+
+
+form{
+
+@include breakpoint(xs){
+    margin: 20px;
+    width: 345px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $White;
+    padding:20px ;
+    border-radius: 10px;
+}
+
+align-self: center;
+margin: 100px;
+background-color: #fff;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+min-height: max-content;
+/* justify-content: center; */
+padding: 20px 40px;
+width: 735px;
+
+
+    h2{
+        font-size: 24px;
+        font-weight: bold;
+        color:$Grey-900;
+        margin: 20px 0px;
+    }
+
+    .input-container{
+        @include breakpoint(xs){
+            display: flex;
+            flex-direction: column;
+            
+        }
+        margin: 15px 0px;
+        display: flex;
+        gap: 15px;
+
+        .first{
+            display: grid;
+        }
+        .second{
+            display: grid;
+        }
+
+
+        
+    }
+
+    input:hover, textarea:hover,.input-query:hover{
+        border: 1px solid $Green-600;
+    }
+
+    input:focus, textarea:focus,.input-query:focus{
+        outline: 1px solid $Green-600;
+        background: rgba($color: $Green-200, $alpha: .5);
+    }
+    input:active, textarea:active,.input-query:active{
+        outline: 1px solid $Green-600;
+        background: rgba($color: $Green-200, $alpha: .5);
+    }
+    .input+#query{
+        margin-top: 15px;
+        
+
+    }
+
+    input,textarea{
+        cursor:pointer;
+        margin-top: 10px;
+        border: 1px solid $Grey-500;
+        border-radius: 10px;
+        padding: 25px;
+    }
+
+    input[type=text], .input-query{
+        width: 320px;
+        height: 50px;
+        @include breakpoint(xs){
+            width: 300px;
+        }
+        
+
+    }
+
+    input[type=email]{
+        height: 50px;
+        
+        @include breakpoint(xs){
+            width: 300px;
+        }
+    }
+
+    .input-query{
+        display: flex;
+        gap:10px ;
+        // align-items:center;
+        justify-content: left;
+        border: 1px solid $Grey-500;
+        border-radius: 10px;
+        padding: 15px 30px;
+        p{
+            align-self: end;
+        }
+    }
+    input[type=radio]{
+        align-self: end;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $Green-200;
+        accent-color: $Green-600;
+    }
+
+    
+
+    input[type=checkbox]{
+        width: 20px;
+        height: 20px;
+        accent-color: $Green-600;
+
+    }
+ 
+
+    textarea{
+        @include breakpoint(xs){
+            width: 300px;
+        }
+        width: 655px;
+        height: 105px;
+    }
+
+    .agree-container{
+        margin: 40px 0;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 2px;
+
+        input{
+            align-self: center;
+        }
+
+        
+        p{
+            align-self: end;
+        }
+       
+    }
+
+
+    button[type=submit]{
+        cursor: pointer;
+        @include breakpoint(xs){
+            width: 300px;
+        }
+        width: 655px;
+        height: 60px;
+        background-color: $Green-600;
+        color: $White;
+        font-size: 16px;
+        font-weight: bold;
+        border: 0;
+        border-radius: 10px;
+    }
+
+
+    button[type=submit]:hover,button[type=submit]:focus{
+        background-color: $Grey-900;
+    }
+}
+

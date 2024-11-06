@@ -1,0 +1,38 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+
+
+.message-sent{
+    background-color: #2b4246;
+    border-radius: 10px;
+    height: max-content;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    width: max-content;
+
+    @include breakpoint(xs){
+    width: 250px;
+
+    }
+
+
+    .title{
+        color: $White;
+        display: flex;
+        gap: 10px;
+        h2{
+            font-size: 16px;
+            align-self: center;
+        }
+        svg{
+            justify-self: center;
+        }
+    }
+
+    p{
+        color: rgba($color: $White, $alpha: .75);
+        margin-top: 15px;
+    }
+}

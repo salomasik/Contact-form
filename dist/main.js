@@ -1,0 +1,1 @@
+"use strict";var form=document.forms[0],messageEl=document.querySelector(".message-sent");form.addEventListener("submit",(function(e){e.preventDefault(),messageEl.removeAttribute("hidden"),setTimeout((function(){messageEl.toggleAttribute("hidden")}),5e3)}));//# sourceMappingURL=main.js.map
